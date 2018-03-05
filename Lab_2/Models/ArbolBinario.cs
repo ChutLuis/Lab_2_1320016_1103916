@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using ClassLibrary;
 
 
 namespace ClassLibrary
@@ -35,8 +36,8 @@ namespace ClassLibrary
 
         public Node<T> Search(Node<T> nodo, T value)
         {
-            ;
-            if (nodo == null)
+            Node<T> current = nodo;
+            if (current == null)
                 return null;
             if (nodo.Value.Equals(value))
                 return nodo;
@@ -45,6 +46,7 @@ namespace ClassLibrary
             
                 return Search(nodo.Left, value);            
         }
+        
 
 
 

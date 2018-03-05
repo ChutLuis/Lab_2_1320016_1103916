@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Contenido del árbol</h2>
+@Html.TextAreaFor(m => TempData["arbol"])
+<br />
+@Html.Label("inorder")
+<br />
+@Html.TextAreaFor(m => TempData["inorden"])
+<br />
+@using (Html.BeginForm("Details", "Arbol"))
+{
+    <p>
+
+        <br />
+        <input type="submit" />
+    </p>
+}
+<br />
+@Html.Label("preorden")
+<br />
+@Html.TextAreaFor(m => TempData["preorden"])
+<br />
+@using (Html.BeginForm("Details", "Arbol"))
+{
+    <p>
+
+        <br />
+        <input type="submit" />
+    </p>
+}
+@Html.Label("postorder")
+<br />
+@Html.TextAreaFor(m => TempData["postorden"])
+<br />
+@using (Html.BeginForm("Details", "Arbol"))
+{
+    <p>
+
+        <br />
+        <input type="submit" />
+    </p>
+}
+<br />
+<br />
+@Html.Label("Insertar")
+<br />
+<br />
+@using (Html.BeginForm("Create1", "Arbol"))
+{
+    <p>
+        @Html.TextBox("Pais")
+        @Html.TextBox("Grupo")
+        <br />
+        <input type="submit" />
+    </p>
+}
+@Html.Label("Eliminar")
+<br />
+<br />
+@using (Html.BeginForm("Delete1", "Arbol"))
+{
+    <p>
+        @Html.TextBox("Pais")
+        @Html.TextBox("Grupo")
+        <br />
+        <input type="submit" />
+    </p>
+}
+
+
+
+
+
+
